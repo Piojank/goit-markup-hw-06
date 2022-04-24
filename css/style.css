@@ -16,7 +16,7 @@
     --dodger: rgba(33, 150, 243, 0.9);
 }
 
-button[type='button'],
+button,
 svg {
     cursor: pointer;
 }
@@ -234,7 +234,7 @@ section {
 
 /* <!-- END service markup--> */
 
-/* <!-- about us markup--> */
+/* <!-- about us text markup--> */
 
 .aboutus {
     padding-bottom: 0;
@@ -293,6 +293,10 @@ section {
     line-height: 1.714;
 }
 
+/* <!-- END about us text markup--> */
+
+/* <!-- about us images markup--> */
+
 .aboutus-images-title {
     font-size: 36px;
     text-align: center;
@@ -329,7 +333,7 @@ section {
     padding: 27px 0;
 }
 
-/* <!-- END about us markup--> */
+/* <!-- END about us images markup--> */
 
 /* <!-- team markup--> */
 
@@ -447,7 +451,9 @@ section {
 
 /* <!-- END clients markup--> */
 
-/* <!-- footer markup--> */
+/* <!== FOOTER MARKUP==> */
+
+/* <!-- footer adress markup--> */
 
 footer {
     background: var(--rock);
@@ -506,6 +512,14 @@ footer .container {
     margin-right: 70px;
 }
 
+/* <!-- END footer adress markup--> */
+
+/* <!-- footer socials markup--> */
+
+.footer-social {
+    margin-right: 78px;
+}
+
 .footer-social-title {
     font-weight: 700;
     font-size: 14px;
@@ -518,8 +532,6 @@ footer .container {
 
 .footer-social-list {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .footer-social-list-item:not(:last-child) {
@@ -549,8 +561,66 @@ footer .container {
     background-color: var(--blue);
 }
 
+/* <!-- END footer socials markup--> */
 
-/* <!-- END footer markup--> */
+/* <!-- footer newsletter markup--> */
+
+.footer-newsletter {
+    margin-right: auto;
+}
+
+.footer-newsletter-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+.footer-newsletter-label > input[type="email"] {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+
+    background-color: transparent;
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    margin-right: 12px;
+}
+
+
+button[type="submit"] {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    height: 50px;
+    display: inline-flex;
+
+    border-style: none;
+    border-radius: 4px;
+
+    padding: 10px 28px 10px 42px;
+    margin: 0;
+    letter-spacing: 0.06em;
+}
+
+.newsletter-send-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+    margin-left: 24px; 
+}
+
+/* <!-- END footer newsletter markup--> */
+
+/* <!== END FOOTER MARKUP==> */
 
 /* <!-- Portfolio markup--> */
 
@@ -722,13 +792,16 @@ footer .container {
     cursor: pointer;
 }
 
-
 .is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
+.modal-close-icon {
+    width: 11px;
+    height: 11px;
+}
 
 /* <!-- END Backdrop markup--> */
 

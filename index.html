@@ -398,42 +398,42 @@
             <li class="clients-list-item list">
               <a class="clients-list-link" href="#">
                 <svg class="clients-icon">
-                  <use href="./images/icons.svg#icon-logo1"></use>
+                  <use href="../images/icons.svg#icon-logo1"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list-item list">
               <a class="clients-list-link" href="#">
                 <svg class="clients-icon">
-                  <use href="./images/icons.svg#icon-logo2"></use>
+                  <use href="../images/icons.svg#icon-logo2"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list-item list">
               <a class="clients-list-link" href="#">
                 <svg class="clients-icon">
-                  <use href="./images/icons.svg#icon-logo3"></use>
+                  <use href="../images/icons.svg#icon-logo3"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list-item list">
               <a class="clients-list-link" href="#">
                 <svg class="clients-icon">
-                  <use href="./images/icons.svg#icon-logo4"></use>
+                  <use href="../images/icons.svg#icon-logo4"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list-item list">
               <a class="clients-list-link" href="#">
                 <svg class="clients-icon">
-                  <use href="./images/icons.svg#icon-logo5"></use>
+                  <use href="../images/icons.svg#icon-logo5"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list-item list">
               <a class="clients-list-link" href="#">
                 <svg class="clients-icon">
-                  <use href="./images/icons.svg#icon-logo6"></use>
+                  <use href="../images/icons.svg#icon-logo6"></use>
                 </svg>
               </a>
             </li>
@@ -517,14 +517,24 @@
           </li>
 
           <li class="footer-newsletter list">
-            <form>
-              <label>
+            <form class="footer-newsletter-form">
+              <label class="footer-newsletter-label">
                 <h3 class="footer-newsletter-title">
                   zapisz się do newslettera
                 </h3>
-                <input type="email" name="email" placeholder="E-mail"/>
-                
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required
+                />
               </label>
+              <button type="submit" class="newsletter-button">
+                Zapisz się
+                <svg class="newsletter-send-icon">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
             </form>
           </li>
         </ul>
@@ -534,8 +544,33 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" id="close" class="close-btn" data-modal-close>
-          X
+          <svg class="modal-close-icon">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
         </button>
+        <h3 clas="modal-form-title">Zostaw swoje dane w formularzu poniżej</h3>
+        <form class="modal-form">
+          <label>
+            <span>Imie</span>
+            <input type="name" name="name" />
+          </label>
+          <label>
+            <span>Telefon</span>
+            <input type="phone" name="phone" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" />
+          </label>
+          <label>
+            <span>Komentarz</span>
+            <textarea
+              name="comment"
+              rows="8"
+              placeholder="Wprowadź text"
+            ></textarea>
+          </label>
+        </form>
       </div>
     </div>
 
