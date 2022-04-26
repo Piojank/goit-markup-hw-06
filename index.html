@@ -517,7 +517,12 @@
           </li>
 
           <li class="footer-newsletter list">
-            <form class="footer-newsletter-form">
+            <form
+              class="footer-newsletter-form"
+              autocomplete="off"
+              method="POST"
+              action="javascript:void(0);"
+            >
               <label class="footer-newsletter-label">
                 <h3 class="footer-newsletter-title">
                   zapisz się do newslettera
@@ -548,32 +553,67 @@
             <use href="./images/icons.svg#icon-cross"></use>
           </svg>
         </button>
-        <h3 clas="modal-form-title">Zostaw swoje dane w formularzu poniżej</h3>
-        <form class="modal-form">
-          <label>
-            <span>Imie</span>
-            <input type="name" name="name" />
+        <h3 class="modal-form-title">Zostaw swoje dane w formularzu poniżej</h3>
+        <form class="modal-form" autocomplete="off" method="POST">
+          <label class="modal-label" for="user_name">
+            <span class="modal-span">Imie</span>
+            <svg class="modal-form-icon">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+            <input type="name" id="user_name" name="name" required />
           </label>
-          <label>
-            <span>Telefon</span>
-            <input type="phone" name="phone" />
+
+          <label class="modal-label" for="user_phone">
+            <span class="modal-span">Telefon</span>
+            <svg class="modal-form-icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+            <input
+              type="phone"
+              id="user_phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+              required
+            />
           </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" />
+
+          <label class="modal-label" for="user_email">
+            <span class="modal-span">Email</span>
+            <svg class="modal-form-icon">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+            <input type="email" id="user_email" name="email" required />
           </label>
-          <label>
-            <span>Komentarz</span>
+
+          <label class="modal-label modal-textarea">
+            <span class="modal-span">Komentarz</span>
             <textarea
               name="comment"
-              rows="8"
+              rows="5"
               placeholder="Wprowadź text"
             ></textarea>
           </label>
+
+          <label class="modal-input">
+            <input
+              class="modal-custom-input hidden-input"
+              type="checkbox"
+              name="accept"
+              required
+            />
+            <span class="modal-policy-text"
+              >Oświadczam, iż akceptuję
+              <a href="#" class="modal-policy-link">Regulamin</a> i
+              <a href="#" class="modal-policy-link">Politykę Prywatności.</a>
+            </span>
+          </label>
+
+          <button type="button" id="send" class="send-btn" data-modal-close>
+            Wyślij
+          </button>
         </form>
       </div>
     </div>
-
     <script src="./js/modal.js"></script>
   </body>
 </html>
