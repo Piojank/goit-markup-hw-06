@@ -897,13 +897,19 @@ button[type="submit"] {
 }
 
 .modal-label:focus-within > input,
-.modal-textarea:focus-within > textarea {
+.modal-textarea:focus-within > textarea,
+.modal-label:hover > input,
+.modal-textarea:hover > textarea {
     outline: none;
     border: 1px solid var(--blue);
     transition: var(--shift);
 }
 
 .modal-label:focus-within > svg {
+    fill: var(--blue);
+}
+
+.modal-label:hover > svg {
     fill: var(--blue);
 }
 
