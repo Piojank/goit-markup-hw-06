@@ -608,8 +608,18 @@ footer .container {
     margin-right: 12px;
 }
 
-.footer-newsletter-label:focus-within>input {
+
+
+.footer-newsletter-label:focus-within > input {
     border: 2px solid var(--blue);
+    outline: none;
+    color: var(--white);
+    transition: var(--shift);
+}
+
+.footer-newsletter-label:hover > input,
+.footer-newsletter-label:focus > input {
+    border: 1px solid var(--blue);
     outline: none;
     color: var(--white);
     transition: var(--shift);
@@ -896,6 +906,8 @@ button[type="submit"] {
     align-items: center;
 }
 
+.modal-label:focus > input,
+.modal-textarea:focus > textarea,
 .modal-label:focus-within > input,
 .modal-textarea:focus-within > textarea,
 .modal-label:hover > input,
