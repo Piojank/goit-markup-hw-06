@@ -892,6 +892,7 @@ button[type="submit"] {
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-label > textarea::placeholder {
@@ -914,7 +915,7 @@ button[type="submit"] {
 .modal-textarea:hover > textarea {
     outline: none;
     border: 1px solid var(--blue);
-    transition: var(--shift);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-label:focus-within > svg {
